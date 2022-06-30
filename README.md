@@ -27,7 +27,7 @@ There is 3 components and 2 pages to the app. The app lifts the state with the s
 
 User must be able to:
 
-- Search for the activities to learn more about in SG.
+- Search for the activities to learn what's available in SG.
 - View the listed activities with their associated ratings to make an informed decision.
 - Select the activity of interest to find out more information.
 
