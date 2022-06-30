@@ -36,12 +36,16 @@ const FetchData = (props) => {
 
   return (
     <Container>
-      <Grid container spacing={3}>
-        {data &&
-          data.map((item, index) => {
-            return <Card key={index} item={item} />;
-          })}
-      </Grid>
+      {!isLoading && (
+        <Grid container spacing={3}>
+          {data &&
+            data.map((item, index) => {
+              return <Card key={index} item={item} />;
+            })}
+        </Grid>
+      )}
+      {isLoading && <p>Loading ... please wait</p>}
+      {!isLoading && error && <p>{error}</p>}
     </Container>
   );
 };
