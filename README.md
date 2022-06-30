@@ -6,11 +6,13 @@ Explore the activities available in Singapore through the SGAttractions APP. Fin
 
 Explore SG attractions is an app for people to search for highlights of activities in SG and to learn more about those activities.
 
-The app is limited in terms of its searches. The searches available are listed as follows:
+The app is limited in terms of its searches. The searches available are listed as follows (must be exact words):
 
 - attractions
 - venue
 - shops
+- accommodation
+- cruises
 
 ## Technical Used
 
