@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Paper, Grid, Typography, Box, Rating } from "@mui/material";
+import { Paper, Grid, Typography, Box, Rating, Button } from "@mui/material";
+import Modal from "./Modal";
 
 const apiKey = "2Km8943D1xLZ9YImM03osKUEjUJecb26";
 
 const Card = (props) => {
+  const [openModal, setOpenModal] = useState("");
+
   let imgSource = "";
   if (props.item.images.length > 0) {
     imgSource =
@@ -30,9 +33,19 @@ const Card = (props) => {
     reviewNum = 0;
   }
 
+  const handleModalOkay = () => {
+    setOpenModal(false);
+  };
 
   return (
     <Grid item xs={3}>
+      {openModal && (
+        <Modal
+          title={props.item.name}
+          message={props.item.description}
+          okayClicked={handleModalOkay}
+        />
+      )}
       <Paper elevation={3}>
         <img src={imgSource} alt={props.item.name} className="img"></img>
         <Box paddingX={1}>
@@ -61,8 +74,9 @@ const Card = (props) => {
           </Typography>
         </Box>
         <Link to={`/${props.item.dataset}/${props.item.uuid}`}>
-          <button>See More</button>
+          <Button>See More</Button>
         </Link>
+        <Button onClick={() => setOpenModal(true)}>Description</Button>
       </Paper>
     </Grid>
   );

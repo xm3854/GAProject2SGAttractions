@@ -27,8 +27,6 @@ const Detail = () => {
       });
   }, []);
 
-  console.log(detail);
-
   // let imgSource = "";
   // if (detail.images.length > 0) {
   //   imgSource =
@@ -42,15 +40,13 @@ const Detail = () => {
 
   return (
     <>
-      <Button variant="outlined" onClick={() => navigate(`/`)}>
-        Back to Explore!
-      </Button>
+      <br />
       <br />
       <Grid container spacing={0} justifyContent="center" alignItems="center">
         <Card sx={{ maxWidth: 1000 }}>
           <CardMedia
             component="img"
-            height="140"
+            height="250"
             image={
               "https://img.theculturetrip.com/1440x807/smart/wp-content/uploads/2016/05/gf70r2-1.jpg"
             }
@@ -66,9 +62,17 @@ const Detail = () => {
             <Typography>Nearest MRT: {detail.nearestMrtStation}</Typography>
           </CardContent>
           <CardActions>
-            <Button size="small">Official Web: {detail.officialWebsite}</Button>
+            <Button size="small" href={detail.officialWebsite}>
+              Official Web: {detail.officialWebsite}
+            </Button>
           </CardActions>
         </Card>
+      </Grid>
+      <br />
+      <Grid container spacing={0} justifyContent="center" alignItems="center">
+        <Button variant="outlined" onClick={() => navigate(`/`)}>
+          Back to Explore!
+        </Button>
       </Grid>
     </>
   );
