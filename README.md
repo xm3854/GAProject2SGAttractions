@@ -21,7 +21,9 @@ React, React Router Dom, [Material UI](https://mui.com/), JavaScript
 ## WireFrame/FlowChart
 
 ![Project2Flow](./Project2Chart.png)
-There is 3 components and 2 pages to the app. The app lifts the state with the search input form and sends the input down to the data fetching component before displaying the information on the main page. Upon selection of the activity to explore, it will redirect the users to the details page.
+There is 4 components and 2 pages to the app. The app lifts the state with the search input form and sends the input down to the data fetching component before displaying the information on the main page. Upon selection of the activity to explore, it will redirect the users to the details page.
+
+There is also an option to see the Modal which comprise of a state lifted to set open/close modal to true/false.
 
 ## User Stories
 
