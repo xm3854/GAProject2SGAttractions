@@ -44,7 +44,7 @@ The hardest part of the project is working with the images in the API. Trial and
 
 ## Unsolved problems
 
-Adding a modal feature to display information on the same page as well as a fixed list search feature.
+Adding validation to search, implementing a list of fixed searches feature. Implementing a nav bar to navigate through different pages.
 
 ## API used
 
